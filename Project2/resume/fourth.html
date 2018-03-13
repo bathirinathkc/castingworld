@@ -1,0 +1,65 @@
+<html>
+<head>
+<script type="text/javascript">
+function add()
+{
+var a=document.form1.num1.value;
+var b=document.form1.num2.value;
+var c=parseInt(a)+parseInt(b);
+document.form1.res.value=c;
+}
+function sub()
+{
+var a=document.form1.num1.value;
+var b=document.form1.num2.value;
+var c=a-b;
+document.form1.res.value=c;
+}
+function mul()
+{
+var a=document.form1.num1.value;
+var b=document.form1.num2.value;
+var c=a*b;
+document.form1.res.value=c;
+}
+function div()
+{
+var a=document.form1.num1.value;
+var b=document.form1.num2.value;
+var c=a/b;
+document.form1.res.value=c;
+}
+ 
+</script>
+</head>
+
+<body>
+    
+<form name="form1">
+	<table align="center" cellpadding="15">
+		<tr>
+			<td>First Number</td>
+			<td><input type="text" name="num1" /></td>
+		</tr>
+			<td>Second Number</td>
+			<td><input type-="text" name="num2" /> <br/></td>
+		</tr>
+		<tr>
+			<td>Select the process</td>
+			<td><input type="button" value="addition" onclick="add()" >
+				<input type="button" value="subtraction" onclick="sub()" >
+				<input type="button" value="multiplication" onclick="mul()" >
+				<input type="button" value="division" onclick="div()" >
+			</td>
+		</tr>
+		<tr>
+			<td>Answer</td>
+			<td><input type="text" name="res"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><center><input type="reset" name="reset"></center></td>
+		</tr>
+	</table> 
+</form>
+</body>
+</html>

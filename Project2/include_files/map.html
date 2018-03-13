@@ -1,0 +1,21 @@
+<center> <div id="googleMap" style="width:100%;height:200px;border: 1px solid lightgery;"></div> </center>
+<script>
+		function myMap() {
+			var myCenter = new google.maps.LatLng(9.910307, 78.122873);
+			var mapCanvas = document.getElementById("googleMap");
+			var mapOptions = {center: myCenter, zoom: 5};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+			var marker = new google.maps.Marker({position: myCenter,animation: google.maps.Animation.BOUNCE});
+  			marker.setMap(map);	
+  			google.maps.event.addListener(marker,'click',function() {
+    var pos = map.getZoom();
+    map.setZoom(19);
+    map.setCenter(marker.getPosition());
+    window.setTimeout(function() {map.setZoom(pos);},3000);
+  });	
+		}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdMT4AZFJeeDxPS_jEBKPXPYUOPORaK9o&callback=myMap"></script>
+
+
